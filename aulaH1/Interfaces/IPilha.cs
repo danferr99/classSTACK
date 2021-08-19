@@ -21,6 +21,9 @@ namespace aulaH1.Interfaces
 
         public bool Eigual(PilhaEstatica pilha);
 
+        public T RetornaTodosElementos();
+
+       
 
 
     }

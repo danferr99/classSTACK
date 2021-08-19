@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\aulaH1",
-    "\\aulaH1\\Classes"
+    "\\aulaH1\\Classes",
+    "\\aulaH1\\Interfaces"
   ],
-  "SelectedNode": "\\aulaH1\\Classes\\ItemPilhaDinamica.cs",
+  "SelectedNode": "\\aulaH1\\Interfaces\\IPilha.cs",
   "PreviewInSolutionExplorer": false
 }

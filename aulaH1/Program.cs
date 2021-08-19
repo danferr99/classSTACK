@@ -10,9 +10,22 @@ namespace aulaH1
             //            PilhaEstatica p = new PilhaEstatica();
             PilhaEstatica p = new PilhaEstatica();
             bool flVazia = p.EstaVazia();
-            p.Empilha(1);
-            p.Empilha(2);
-            p.Empilha(3);
+            p.Empilha(10);
+            p.Empilha(20);
+            p.Empilha(30);
+            p.Empilha(40);
+            p.Empilha(50);
+            p.Empilha(60);
+            
+            float media = p.Media();
+            int maior =p.Maior();
+            int menor = p.Menor();
+
+
+
+
+            media= p2
+            
             var numeros = p.RetornaTodosElementos();
             foreach (int num in numeros)
             {

@@ -26,7 +26,15 @@ namespace aulaH1.Classes
             Indice = 0;
         }
 
-       
+      public int Topo()
+        {
+            if (EstaVazia())
+                throw new InvalidOperationException("Exceção: Pilha Vazia");
+            return VetorElementos[Indice-1];
+        }   
+        
+        
+        
         public int BuscaTopo()
         {
 
@@ -101,12 +109,112 @@ namespace aulaH1.Classes
 
 
         }
-        public bool Eigual(PilhaEstatica p)
+        
+         
+         public int Tamanho()
         {
-
-            throw new NotImplementedException();
+            return Indice;
+        } 
+        public bool EstaVazia()
+        {
+            return Indice == 0;
         }
 
 
+        public IEnumerable<int> RetornaTodosElementos()
+
+        {
+            for (int i = Indice - 1; i >= 0; i-- )
+            {
+                yield return VetorElementos[i];
+
+
+            }
+
+
+        }
+
+    public int Maior()
+
+        {
+           
+            if(EstaVazia())
+                    throw new NotImplementedException();
+
+            
+            int MaiorElemento = Topo();
+            for (int i = Indice - 2; i >= 0; i-- )
+            {
+                yield return VetorElementos[i];
+
+                if (MaiorElemento < VetorElementos[i])
+                      MaiorElemento = VetorElementos[i];
+             }
+
+            return MaiorElemento;
+       
+        
+        }
+    
+     public int Menor()
+
+        {
+           
+            if(EstaVazia))
+                    throw new NotImplementedException();
+
+            
+            int MenorElemento = Topo();
+            for (int i = Indice - 2; i >= 0; i-- )
+            {
+                yield return VetorElementos[i];
+
+                if (MenorElemento < VetorElementos[i])
+                      MenorElemento = VetorElementos[i];
+             }
+
+            return MenorElemento;
+       
+        
+        }
+    
+    
+        public float Media()
+            {
+            int soma = 0;
+            
+               for (int i = Indice - 1; i >= 0; i-- )
+            {
+               soma= soma + VetorElementos[i];
+
+
+            }
+               return soma / Tamanho();
+        
+        
+        
+        
+        }
+    
+    
+    public bool Eigual(PilhaEstatica p)
+        {
+            if (Tamanho()!= p.Tamanho())
+            throw new NotImplementedException();
+      return false;
+
+            for (int i = Indice -1; i >=0; i--)
+            {
+
+                if (VetorElementos[i] != p.VetorElementos[i])
+                    return false;                           
+
+            }
+        return true;
+       
+        
+        }
     }
+
+
 }
