@@ -6,22 +6,20 @@ using System.Text;
 
 namespace aulaH1.Interfaces
 {
-    public interface IPilha<T>
+    public interface IPilha<Container>
     {
-        public void Empilha(T valor);
+        public void Empilha(Container valor);
 
-        public T Desempilha();
+        public Container Desempilha();
 
-        public T MaiorElemento();
+        public Container MaiorElemento();
         
         
-        public T BuscaTopo();
+        public Container BuscaTopo();
 
-        public T MenorElemento();
+        public Container MenorElemento();
 
-        public bool Eigual(PilhaEstatica pilha);
-
-        public T RetornaTodosElementos();
+         public Container RetornaTodosElementos();
 
        
 

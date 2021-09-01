@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Container.cs" />
     <Compile Include="Classes\PilhaEstatica.cs" />
+    <Compile Include="Classes\PilhaEstaticaContainers.cs" />
     <Compile Include="Interfaces\IPilha.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
